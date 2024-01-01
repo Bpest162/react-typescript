@@ -1,0 +1,15 @@
+.user-post-list{
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    &__item h2{
+        font-size: 24px;
+        font-weight: 400;
+        color: #484848;
+    }
+    &__item p{
+        font-size: 16px;
+        font-weight: 400;
+        color: #5f5f62;
+    }
+}

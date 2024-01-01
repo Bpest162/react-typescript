@@ -1,0 +1,50 @@
+.user-todos-list{
+    &__items{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__items p{
+        font-size: 16px;
+        font-weight: 400;
+        color: #787878;
+    }
+}
+.inputWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    input+label {
+        width: 28px;
+        height: 28px;
+        border: 2px solid #EA5E32;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        position: relative;
+    }
+    input+label::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: #EA5E32;
+        border: 2px solid #FFCBBA;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+    }
+    input:checked+label::before {
+        transform: scale(1)
+    }
+}
